@@ -41,12 +41,34 @@ posts = Post.all
     )
   end
   
-user = User.first
-user.skip_reconfirmation!
-user.update_attributes!(
-  email: 'anthonymahadeo@gmail.com',
+# Create an admin user
+admin = User.new(
+  name:     'Admin User',
+  email:    'admin@bloccit.com',
+  password: '123456789',
+  role:     'admin'
+)
+admin.skip_confirmation!
+admin.save!
+
+# Create an moderator
+moderator = User.new(
+  name:     'Moderator User',
+  email:    'moderator@bloccit.com',
+  password: '123456789',
+  role:     'moderator'
+)
+moderator.skip_confirmation!
+moderator.save!
+
+# Create an member
+member = User.new(
+  name:     'Member User',
+  email:    'member@bloccit.com',
   password: '123456789'
-  )
+)
+member.skip_confirmation!
+member.save!
   
 puts "Seed finished"
 puts "#{User.count} users created"
