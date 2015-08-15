@@ -1,0 +1,6 @@
+<h1>New Summary</h1>
+<%= form_for [@topic, @post, @summary], url: topic_post_summary_path(@topic, @post) do |f| %>
+<%= f.label :body %>
+<%= f.text_area :body %>
+<%= f.submit "Save" %>
+<% end %>
