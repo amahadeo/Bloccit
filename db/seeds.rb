@@ -50,7 +50,7 @@ posts = Post.all
     body: Faker::Lorem.paragraph
     )
   end
-  
+=begin  
 # Create an admin user
 admin = User.new(
   name:     'Admin User',
@@ -79,7 +79,7 @@ member = User.new(
 )
 member.skip_confirmation!
 member.save!
-  
+=end
 puts "Seed finished"
 puts "#{User.count} users created"
 puts "#{Topic.count} topics created"
