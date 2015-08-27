@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
     @topic = Topic.find(params[:topic_id])
     @comment.post = @post
     @comment.user = current_user
+    authorize @comment
     if @comment.save
       flash[:notice] = "Comment was added."
       redirect_to [@topic, @post]

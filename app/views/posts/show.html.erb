@@ -22,7 +22,9 @@
   <%= render partial: 'comments/comment', locals: { comment: comment } %>
 <% end %>
 
-<%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @post.comments.new} %>
+<% if policy(@comments).create? %>
+  <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @post.comments.new} %>
+<% end %>
 
 
 

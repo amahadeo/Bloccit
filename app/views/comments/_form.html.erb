@@ -1,8 +1,6 @@
-<% if current_user %>
-  <b>Add a comment:</b>
-  <%= form_for [topic, post, comment] do |f| %>
-    <%= f.label :body %>
-    <%= f.text_field :body %>
-    <%= f.submit "Save" %>
-  <% end %>
+<b>Add a comment:</b>
+<%= form_for [topic, post, comment] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+  <%= f.submit "Save" %>
 <% end %>
