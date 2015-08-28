@@ -15,9 +15,8 @@ class PostsController < ApplicationController
   
   def create
     @topic = Topic.find(params[:topic_id])
-    @post = Post.new(post_params)
+    @post = @topic.posts.build(post_params)
     @post.user = current_user
-    @post.topic = @topic
     authorize @post
     if @post.save
       flash[:notice] = "Post was saved."
