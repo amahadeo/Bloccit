@@ -30,4 +30,12 @@ class Post < ActiveRecord::Base
     validates :body, length: { minimum: 20 }, presence: true
     # validates :topic, presence: true
     # validates :user, presence: true
+    
+    after_create :create_vote
+    
+    private
+    
+    def create_vote
+      user.votes.create(value: 1, post: self)
+    end
 end
