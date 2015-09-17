@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'newrelic_rpm'
 gem 'will_paginate', '~> 3.0.5'
 gem 'fog'
 gem 'carrierwave'
