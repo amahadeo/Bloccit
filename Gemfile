@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'puma'
 gem 'newrelic_rpm'
 gem 'will_paginate', '~> 3.0.5'
 gem 'fog'
