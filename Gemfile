@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'factory_girl_rails', '~> 4.0'
 gem 'puma'
 gem 'newrelic_rpm'
 gem 'will_paginate', '~> 3.0.5'
@@ -63,6 +62,8 @@ group :development, :test do
   gem 'spring'
   
   gem 'capybara'
+  
+  gem 'factory_girl_rails', '~> 4.0'
 
 end
 
