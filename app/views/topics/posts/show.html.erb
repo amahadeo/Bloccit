@@ -33,11 +33,13 @@
 </div>
 
 <h2>Comments</h2>
-<%= render partial: 'comments/comment', collection: @comments %>
-
-<% if policy(@comments).create? %>
-  <%= render partial: 'comments/form', locals: {post: @post, comment: @post.comments.new} %>
-<% end %>
-
+<div class='js-comments'>
+  <%= render partial: 'comments/comment', collection: @comments %>
+</div>
+<div class='new-comment'>
+  <% if policy(@comments).create? %>
+    <%= render partial: 'comments/form', locals: {post: @post, comment: @post.comments.new} %>
+  <% end %>
+</div>
 
 
