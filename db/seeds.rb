@@ -24,7 +24,7 @@ users = User.all
 # Create Topics
 15.times do
   Topic.create!(
-    name:        Faker::Company.buzzword,
+    name:        Faker::Commerce.department,
     description: Faker::Lorem.paragraph
   )
 end
