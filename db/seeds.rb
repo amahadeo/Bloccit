@@ -24,7 +24,7 @@ users = User.all
 # Create Topics
 15.times do
   Topic.create!(
-    name:        Faker::Lorem.sentence,
+    name:        Faker::Company.buzzword,
     description: Faker::Lorem.paragraph
   )
 end
@@ -35,7 +35,7 @@ topics = Topic.all
   post = Post.create!(
     user:  users.sample,
     topic: topics.sample,
-    title: Faker::Lorem.sentence,
+    title: Faker::Hacker.say_something_smart,
     body:  Faker::Lorem.paragraph
     )
     
@@ -52,7 +52,7 @@ posts = Post.all
     # user: users.sample, # we have not yet associated Users with Comments
     user: users.sample,
     post: posts.sample,
-    body: Faker::Lorem.paragraph
+    body: Faker::Hacker.say_something_smart
     )
   end
 
